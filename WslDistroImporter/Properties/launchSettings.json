@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "WslImporter": {
+      "commandName": "Project",
+      "commandLineArgs": "--distro-name Debian-12 --dockerfile \"C:\\Utvikling\\Dockerfile\" --install-location C:\\Utvikling\\Distros\\Debian-12\\"
+    }
+  }
+}
