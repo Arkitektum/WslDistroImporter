@@ -1,6 +1,7 @@
 ﻿using CommandLine;
 using CommandLine.Text;
 using WslDistroImporter;
+using static WslDistroImporter.Helpers;
 
 var parser = new Parser(settings =>
 {
@@ -8,7 +9,9 @@ var parser = new Parser(settings =>
     settings.IgnoreUnknownArguments = false;
 });
 
-var parserResult = parser.ParseArguments<Options>(args);
+var commandLineArgs = GetCommandLineArgs();
+        
+var parserResult = parser.ParseArguments<Options>(commandLineArgs);
 
 var exitCode = parserResult
     .MapResult(
